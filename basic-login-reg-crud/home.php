@@ -3,7 +3,6 @@ require("session.php");
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +19,7 @@ require("session.php");
   <?php
   echo "<h1> Welcome '" . $_SESSION['username'] . "' </h1>";
   ?>
-
-
+  <a href="admin.php">Admin</a> |
   <form action="logout.php" method="post"><button class="btn btn-danger" href="logout.php">LOGOUT</button></form>
 </body>
 

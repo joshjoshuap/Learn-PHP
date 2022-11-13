@@ -9,17 +9,6 @@
 </head>
 
 <body>
-  <!-- <?php
-
-        if (isset($_POST['btnsubmit'])) {
-          $name = $_POST['username'];
-          $password = $_POST['password'];
-
-          echo "Username: " . $name . " Password: " . $password;
-        }
-
-        ?> -->
-
 
   <?php
   if (isset($_POST['btnsubmit'])) {

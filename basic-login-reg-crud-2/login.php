@@ -14,12 +14,12 @@ if (isset($_POST['btn-submit'])) {
   $password = $_POST['password'];
   $password = mysqli_real_escape_string($connection, $password);
 
-  $encryptPassword = crypt($password, '$5$rounds=5000$usesomesillystringforsalt$'); // encryption
+  // $encryptPassword = crypt($password, '$5$rounds=5000$usesomesillystringforsalt$'); // encryption
 
   if (empty($username) || empty($password)) {
     echo "Enter your username and password";
   } else {
-    $validate = "SELECT * FROM user_info WHERE username = '$username' AND pass = '$encryptPassword'";
+    $validate = "SELECT * FROM user_info WHERE username = '$username' AND pass = '$password'";
 
     $sql = mysqli_query($connection, $validate);
     $rowValidate = mysqli_fetch_array($sql);

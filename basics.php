@@ -1,25 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+// Basics
+$firstName = "Joshua"; // This firstname
+$age = 21; /* This is age */
+echo $firstName;
+echo "Hello World";
 
-<body>
+// Strings
+$name = "Joshua";
+$age = 21;
+$address = "Quezon City";
+$number = 000;
 
-  <?php
+echo "My name is " . $name, " From " . $address;
 
-  $firstName = "Joshua"; // This firstname
-  $age = 21; /* This is age */
+// Arthmetics
+$firstNum = 2;
+$secondNum = 3;
 
-  ?>
+$addition = $firstNum + $secondNum;
+$subtraction = $firstNum - $secondNum;
+$multiplication = $firstNum * $secondNum;
+$division = $firstNum / $secondNum;
 
-  <h1><?php echo $firstName ?></h1>
-  <h2><?php echo "Hello World" ?></h2>
-
-</body>
-
-</html>
+echo "Addition: " . $addition . "<br /> Subtraction: " . $subtraction, "<br /> Multiplication: " . $multiplication, "<br /> Division: " . $division;

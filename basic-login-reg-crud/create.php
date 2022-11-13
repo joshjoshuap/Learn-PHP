@@ -1,11 +1,10 @@
-<?php
+<?php include 'dbconnect.php';
 
 if (isset($_POST['btn-submit'])) {
 
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $connection = mysqli_connect('localhost', 'root', '', 'usertest');
 
   if ($connection) {
     echo "Connected";
@@ -24,9 +23,6 @@ if (isset($_POST['btn-submit'])) {
 }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +60,7 @@ if (isset($_POST['btn-submit'])) {
 
       <br />
       <button class="btn btn-primary" type="submit" name="btn-submit">Submit</button>
-      <a href="readData.php">User list</a> |
+      <a href="admin.php">User list</a> |
       <a href="update.php"> Update User</a> |
       <a href="delete.php"> Delete User</a>
     </form>

@@ -1,8 +1,7 @@
-<?php include "dbconnect.php"; ?>
-<?php include "functions.php"; ?>
-<?php
+<?php include "functions.php";
+
 if (isset($_POST['btn-submit'])) {
-  updateData();
+  deleteData();
 }
 
 ?>
@@ -33,17 +32,14 @@ if (isset($_POST['btn-submit'])) {
 
   <div class="container">
 
-    <form action="update.php" method="post">
-      <h2>Update User Password</h2>
+    <form action="delete.php" method="post">
+      <h2>DELETE USERNAME</h2>
       <h4>Username: </h4>
       <input type="text" name="username" id="">
-      <h4>Password: </h4>
-      <input type="password" name="password" id="">
-      <br />
-      <button class="btn btn-primary" type="submit" name="btn-submit">Update</button>
-      <a href="readData.php">User list</a> |
-      <a href="create.php"> Create User</a> |
-      <a href="delete.php"> Delete User</a>
+      <button class="btn btn-primary" type="submit" name="btn-submit">Delete</button>
+      <a href="admin.php">User list</a> |
+      <a href="update.php"> Update User</a> |
+      <a href="create.php">Create User</a>
     </form>
   </div>
 

@@ -17,9 +17,9 @@ if (isset($_POST['btn-submit'])) {
   $address = mysqli_real_escape_string($connection, $address);
 
 
-  $encryptPassword = crypt($password, '$5$rounds=5000$usesomesillystringforsalt$');
+  // $encryptPassword = crypt($password, '$5$rounds=5000$usesomesillystringforsalt$');
 
-  $insertQuery = "INSERT INTO user_info(username, pass, firstname, lastname, age, `address`) VALUES ('$username', '$encryptPassword','$firstname','$lastname','$age', '$address')";
+  $insertQuery = "INSERT INTO user_info(username, pass, firstname, lastname, age, `address`) VALUES ('$username', '$password','$firstname','$lastname','$age', '$address')";
   $sql = mysqli_query($connection, $insertQuery);
 
   if (!$sql) {

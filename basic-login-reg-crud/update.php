@@ -1,15 +1,11 @@
-<?php include "dbconnect.php";
+<?php include "functions.php";
 
-
-$displayQuery = "SELECT * FROM users";
-
-$sql = mysqli_query($connection, $displayQuery);
-
-if (!$sql) {
-  die('Query Failed');
+if (isset($_POST['btn-submit'])) {
+  updateData();
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +16,7 @@ if (!$sql) {
   <title>Document</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-
   <style>
-    .head {
-      background-color: black;
-      color: white;
-    }
-
     .container {
       width: 80%;
       display: grid;
@@ -38,36 +28,21 @@ if (!$sql) {
 </head>
 
 <body>
+
   <div class="container">
 
-    <table>
-      <tr class='head'>
-        <th>Username</th>
-        <th>Password</th>
-      </tr>
-      <?php
-      while ($sqlRow = mysqli_fetch_assoc($sql)) {
-        echo "
-  <tr>
-  <td>" . $sqlRow['username'] . "</td>
-  <td>" . $sqlRow['pass'] . "</td>
-  </tr>
-  ";
-      }
-      ?>
-
-    </table>
-    <div>
-      <a href="create.php">Create User</a> |
-      <a href="update.php"> Update User</a> |
+    <form action="update.php" method="post">
+      <h2>Update User Password</h2>
+      <h4>Username: </h4>
+      <input type="text" name="username" id="">
+      <h4>Password: </h4>
+      <input type="password" name="password" id="">
+      <br />
+      <button class="btn btn-primary" type="submit" name="btn-submit">Update</button>
+      <a href="admin.php">User list</a> |
+      <a href="create.php"> Create User</a> |
       <a href="delete.php"> Delete User</a>
-    </div>
+    </form>
   </div>
-
-
-
-
-
-</body>
 
 </html>
