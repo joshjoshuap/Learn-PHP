@@ -34,3 +34,8 @@ if ($username === "admin" && $password === "123") {
 }
 
 /* Successful Login */
+
+// Ternary Operator
+$age = 18;
+echo ($age < 18) ? 'Minor are not allowed' : 'You are Allowed';
+/* You are Allowed */
