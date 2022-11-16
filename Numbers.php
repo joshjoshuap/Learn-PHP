@@ -1,5 +1,6 @@
 <?php
 
+// Number Methods
 echo pow(2, 3); // 8 = 2 * 2 * 2 
 echo rand(1, 100); // random numbers between 1-100
 echo sqrt(25); // 5
