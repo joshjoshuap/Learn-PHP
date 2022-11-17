@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// unsetting and removing session
 $_SESSION['status'] = 'invalid';
 unset($_SESSION['username']);
 

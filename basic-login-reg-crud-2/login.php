@@ -26,6 +26,7 @@ if (isset($_POST['btn-submit'])) {
 
     if (mysqli_num_rows($sql) > 0) {
 
+      // setting and add session
       $_SESSION['status'] = 'valid';
       $_SESSION['username'] = $rowValidate['username'];
 
