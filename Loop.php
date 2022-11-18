@@ -22,7 +22,7 @@ for ($i = 1; $i <= 5; $i++) {
 // For Each - Single Array
 $people = array("Joshua", "Juan", "Jose");
 foreach ($people as $person) {
-    echo $person . '<br />';
+    echo '<br />' . $person;
 }
 /* 
 Joshua
@@ -31,14 +31,14 @@ Jose
 */
 
 // For Each - Multi Array
-$name = array(
+$people = array(
     array("Joshua", "Juan", "Jose"),
     array("Maria", "Andres", "Emilio")
 );
 
-foreach ($name as $person) {
-    foreach ($person as $firstname) {
-        echo $firstname . "<br />";
+foreach ($people as $person) {
+    foreach ($person as $name) {
+        echo $name . "<br />";
     }
 }
 

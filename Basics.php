@@ -14,23 +14,3 @@ echo "My name is " . $name;
 define('PASSWORD', '123456');
 echo PASSWORD;
 // echo password; // error
-
-// Arithmetic
-$firstNum = 2;
-$secondNum = 3;
-
-$addition = $firstNum + $secondNum;
-$subtraction = $firstNum - $secondNum;
-$multiplication = $firstNum * $secondNum;
-$division = $firstNum / $secondNum;
-
-echo 'Addition' . $addition;
-echo 'Subtraction' . $subtraction;
-echo 'Mulitply' . $multiplication;
-echo 'Division' . $division;
-/* 
-Addition: 5
-Subtraction: -1
-Multiplication: 6
-Division: 0.66666666666667
-*/
