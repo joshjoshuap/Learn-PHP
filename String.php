@@ -5,8 +5,10 @@ $name = "Joshua";
 echo strlen($name); // 6
 echo strtoupper($name); // JOSHUA
 echo strtolower($name); // joshua
+echo strrev($name); // auhsoJ
 echo substr($name, 1, 3); // osh
 echo strpos($name, 'J'); // 0
+echo $name[0]; // J
 echo trim('Hello     World'); // Hello World
 echo str_replace('Joshua', 'Jose', $name); // Jose
 echo is_string($name); // 1
