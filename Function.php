@@ -39,3 +39,10 @@ echo $name; // Joshua
 echo "<br />";
 displayName();
 echo $name; // Juan and Joshua
+
+// Variable Function
+$greet = function ($input) {
+    echo 'Hello ' . $input;
+};
+
+$greet('Joshua');
