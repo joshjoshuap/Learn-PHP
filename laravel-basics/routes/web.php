@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -38,6 +39,8 @@ Route::get('/user', [UserController::class, 'index']); // calling index from use
 // Route::get('/user', [UserController::class, 'index'])->name('login'); // authentication
 
 Route::get('/user/{id}', [UserController::class, 'show']);
+
+Route::get('/students', [StudentController::class, 'index']);
 
 // Route::get('/user/{id}', [UserController::class, 'show'])->middleware(('auth')); // authentication
 
