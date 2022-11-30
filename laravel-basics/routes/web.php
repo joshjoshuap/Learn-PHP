@@ -30,17 +30,23 @@ use App\Http\Controllers\UserController;
 //     return view('test');
 // });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/user', [UserController::class, 'index']); // calling index from user controller
+Route::get('/', [UserController::class, 'index']);
+
+Route::get('/login', [UserController::class, 'login']);
+
+Route::get('/register', [UserController::class, 'register']);
+
+Route::get('/students', [StudentController::class, 'index']);
+
+// Route::get('/user', [UserController::class, 'index']); // calling index from user controller
 
 // Route::get('/user', [UserController::class, 'index'])->name('login'); // authentication
 
-Route::get('/user/{id}', [UserController::class, 'show']);
-
-Route::get('/students', [StudentController::class, 'index']);
+// Route::get('/user/{id}', [UserController::class, 'show']);
 
 // Route::get('/user/{id}', [UserController::class, 'show'])->middleware(('auth')); // authentication
 

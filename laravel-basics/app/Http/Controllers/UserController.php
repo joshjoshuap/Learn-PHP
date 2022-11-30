@@ -11,6 +11,16 @@ class UserController extends Controller
         return 'Hello from UserController';
     }
 
+    public function login()
+    {
+        return view('users.login');
+    }
+
+    public function register()
+    {
+        return view('users.register');
+    }
+
     public function show($id)
     {
         // $data = array(
@@ -21,7 +31,7 @@ class UserController extends Controller
         // );
         // return view('user', ['data' => $data]);
 
-        return view('user')
+        return view('users.index')
             ->with('name', 'Joshua')
             ->with('age', 22)
             ->with('address', 'Quezon City');
