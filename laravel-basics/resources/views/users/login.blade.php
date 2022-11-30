@@ -1,13 +1,15 @@
 @include('partials.header', ['title' => 'Admin Login'])
+@include('components.navbar')
+
 <header class='max-w-lg mx-auto'>
     <a href=''>
-        <h1 class="text-4xl font-bold text-center">Admin Login</h1>
+        <h1 class="text-4xl font-bold text-center">{{ $title }}</h1>
     </a>
 </header>
 <main class="bg-gray-600 max-w-lg mx-auto p-8 my-10 rounded-lg shadow">
     <section>
         <h3 class="font-bold text-2xl text-white text-center">Welcome to Student System</h3>
-        <p class="text-gray-200 pt-4">Create new Admin Account</p>
+        <p class="text-gray-200 text-center pt-4">Log in to your account</p>
     </section>
     <section class="mt-10">
         <form action="" class="flex flex-col">
