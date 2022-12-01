@@ -34,13 +34,19 @@ use App\Http\Controllers\UserController;
 //     return view('welcome');
 // });
 
-Route::get('/', [UserController::class, 'index']);
+Route::get('/', [StudentController::class, 'index'])->middleware('auth'); // protect / with middleware, redirect to login
 
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+Route::post('/login/process', [UserController::class, 'process']);
 
 Route::get('/register', [UserController::class, 'register']);
 
-Route::get('/students', [StudentController::class, 'index']);
+Route::post('/logout', [UserController::class, 'logout']);
+
+Route::post('/store', [UserController::class, 'store']);
+
+// Route::get('/students', [StudentController::class, 'index']);
 
 // Route::get('/user', [UserController::class, 'index']); // calling index from user controller
 

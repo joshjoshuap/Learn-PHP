@@ -1,5 +1,6 @@
 @include('partials.header', ['title' => 'Student Information'])
 @include('components.navbar')
+<x-messages />
 
 <header class='max-w-lg mx-auto mt-20'>
     <a href=''>

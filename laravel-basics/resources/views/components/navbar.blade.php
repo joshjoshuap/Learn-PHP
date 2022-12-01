@@ -16,6 +16,14 @@
                     Register
                 </span>
             </a>
+            <form action='/logout' method='post'>
+                @csrf
+                <button type="submit">
+                    <span class="self-centered text-xl text-red-600 font-semibold whitespace-nowrap ">
+                        Logout
+                    </span>
+                </button>
+            </form>
         </div>
     </div>
 </nav>
