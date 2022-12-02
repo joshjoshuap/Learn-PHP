@@ -45,6 +45,9 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="mx-auto">
+            {{ $students->links() }}
+        </div>
     </div>
 </section>
 @include('partials.footer')
