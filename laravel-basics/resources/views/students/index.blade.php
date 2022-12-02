@@ -21,6 +21,9 @@
                     <th scope="col" class="py-3 px-5">
                         Age
                     </th>
+                    <th scope="col" class="py-3 px-5">
+                        Email
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +37,9 @@
                         </td>
                         <td class="py-4 px-6 text-neutral-900">
                             {{ $student->age }}
+                        </td>
+                        <td class="py-4 px-6 text-neutral-900">
+                            {{ $student->email }}
                         </td>
                     </tr>
                 @endforeach

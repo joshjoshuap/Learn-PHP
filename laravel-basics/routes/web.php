@@ -36,6 +36,10 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [StudentController::class, 'index'])->middleware('auth'); // protect / with middleware, redirect to login
 
+Route::get('/add/student', [StudentController::class, 'create']);
+
+Route::post('/add/student', [StudentController::class, 'store']);
+
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 Route::post('/login/process', [UserController::class, 'process']);
@@ -45,6 +49,8 @@ Route::get('/register', [UserController::class, 'register']);
 Route::post('/logout', [UserController::class, 'logout']);
 
 Route::post('/store', [UserController::class, 'store']);
+
+
 
 // Route::get('/students', [StudentController::class, 'index']);
 

@@ -5,25 +5,34 @@
                 Student System
             </span>
         </a>
-        <div class="flex gap-4">
-            <a href="/login">
-                <span class="self-centered text-xl text-blue-600 font-semibold whitespace-nowrap ">
-                    Login
-                </span>
-            </a>
-            <a href="/register">
-                <span class="self-centered text-xl text-green-600 font-semibold whitespace-nowrap ">
-                    Register
-                </span>
-            </a>
-            <form action='/logout' method='post'>
-                @csrf
-                <button type="submit">
-                    <span class="self-centered text-xl text-red-600 font-semibold whitespace-nowrap ">
-                        Logout
+        @auth
+            <div class="flex gap-4">
+                <a href="/add/student">
+                    <span class="self-centered text-xl text-green-600 font-semibold whitespace-nowrap ">
+                        Add New
                     </span>
-                </button>
-            </form>
+                </a>
+                <form action='/logout' method='post'>
+                    @csrf
+                    <button type="submit">
+                        <span class="self-centered text-xl text-red-600 font-semibold whitespace-nowrap ">
+                            Logout
+                        </span>
+                    </button>
+                </form>
+            @else
+                <a href="/login">
+                    <span class="self-centered text-xl text-blue-600 font-semibold whitespace-nowrap ">
+                        Login
+                    </span>
+                </a>
+                <a href="/register">
+                    <span class="self-centered text-xl text-green-600 font-semibold whitespace-nowrap ">
+                        Register
+                    </span>
+                </a>
+            @endauth
+
         </div>
     </div>
 </nav>
